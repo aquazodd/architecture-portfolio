@@ -1,0 +1,1175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #f4f3ef;
+  color: #111;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 80px;
+
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  mix-blend-mode: multiply;
+}
+
+.logo {
+  font-size: 18px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.05em;
+}
+
+.nav-links {
+  display: flex;
+
+  gap: 35px;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #111;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+   GENERAL
+   ===================================================== */
+
+.eyebrow {
+  margin: 0;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+}
+
+/* =====================================================
+   HOME
+   ===================================================== */
+
+.hero {
+  min-height: clamp(640px, 84vh, 820px);
+
+  padding: 120px 5vw 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.hero-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero h1 {
+  margin: 25px 0 40px;
+
+  font-size: clamp(80px, 16vw, 230px);
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+.hero-description {
+  max-width: 400px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.scroll-indicator {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+/* =====================================================
+   WORK
+   ===================================================== */
+
+.work-section {
+  padding: 120px 5vw 150px;
+}
+
+.featured-work {
+  padding-top: 100px;
+}
+
+.section-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #111;
+
+  padding-bottom: 15px;
+
+  margin-bottom: 70px;
+}
+
+.section-number {
+  margin: 0;
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+}
+
+.projects {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 120px;
+}
+
+.project {
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+
+  height: 70vh;
+
+  min-height: 500px;
+
+  background: #d8d6cf;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.project-image span {
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  opacity: 0.5;
+}
+
+.project-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #111;
+
+  margin-top: 15px;
+}
+
+.project-info h2 {
+  margin: 8px 0 0;
+
+  font-size: clamp(35px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.project-number {
+  margin: 0;
+
+  font-size: 10px;
+}
+
+.project-meta {
+  text-align: right;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  line-height: 1.5;
+}
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+.about-section {
+  padding: 150px 10vw;
+
+  border-top: 1px solid #111;
+}
+
+.about-preview {
+  padding-top: 130px;
+
+  padding-bottom: 130px;
+}
+
+.about-preview .about-content {
+  margin-top: 70px;
+}
+
+.about-preview .about-content h2 {
+  margin-bottom: 45px;
+}
+
+.about-content {
+  max-width: 900px;
+
+  margin-top: 100px;
+}
+
+.about-content h2 {
+  margin: 0 0 70px;
+
+  font-size: clamp(40px, 6vw, 90px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.about-content h2 span {
+  opacity: 0.45;
+}
+
+.about-content p {
+  max-width: 600px;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact-section {
+  min-height: 80vh;
+
+  padding: 120px 5vw 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-top: 1px solid #111;
+}
+
+.contact-preview {
+  min-height: 70vh;
+
+  padding-top: 100px;
+}
+
+.contact-section h2 {
+  margin: auto 0 30px;
+
+  font-size: clamp(70px, 15vw, 220px);
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+.email {
+  width: fit-content;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid #111;
+
+  padding-bottom: 5px;
+}
+
+.footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 100px;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.footer div {
+  display: flex;
+
+  gap: 25px;
+}
+
+/* =====================================================
+   PROJECT PAGE
+   ===================================================== */
+
+.project-page {
+  padding-top: 1px;
+}
+
+/* PROJECT HERO */
+
+.project-hero {
+  min-height: 100svh;
+
+  padding: 150px 5vw 80px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+.project-hero h1 {
+  margin: 30px 0 90px;
+
+  max-width: 1200px;
+
+  font-size: clamp(68px, 12vw, 190px);
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.07em;
+}
+
+.project-page-meta {
+  display: flex;
+
+  gap: clamp(40px, 9vw, 140px);
+
+  border-top: 1px solid #111;
+
+  padding-top: 15px;
+}
+
+.project-page-meta span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.5;
+}
+
+.project-page-meta p {
+  margin: 0;
+
+  font-size: 11px;
+}
+
+/* HERO IMAGE */
+
+.project-large-image {
+  position: relative;
+
+  width: 90%;
+
+  height: min(80vh, 980px);
+
+  margin: 0 auto;
+
+  background: #d0cec7;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.project-large-image span {
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  opacity: 0.5;
+}
+
+.project-large-image-content,
+.project-card-image-content {
+  object-fit: cover;
+}
+
+/* PROJECT INTRO */
+
+.project-introduction {
+  display: grid;
+
+  grid-template-columns: 30% 1fr;
+
+  padding: 180px 10vw;
+
+  border-bottom: 1px solid #111;
+}
+
+.project-introduction > div {
+  max-width: 780px;
+}
+
+.project-introduction p:not(.eyebrow) {
+  margin: 0;
+
+  font-size: clamp(28px, 3vw, 48px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.04em;
+}
+
+/* PROJECT SECTIONS */
+
+.project-section {
+  padding: 120px 5vw;
+
+  border-bottom: 1px solid #111;
+}
+
+.project-section-label {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  margin-bottom: 50px;
+
+  border-bottom: 1px solid #111;
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+}
+
+.project-section-label span:last-child {
+  font-weight: 500;
+}
+
+.project-section-content {
+  max-width: 1600px;
+}
+
+.project-placeholder {
+  height: 70vh;
+
+  min-height: 500px;
+
+  background: #d8d6cf;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  opacity: 0.7;
+}
+
+.project-section-description {
+  max-width: 700px;
+
+  margin: 0 0 50px;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+.project-section-images {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+}
+
+.project-section-image {
+  position: relative;
+
+  height: min(60vh, 760px);
+
+  min-height: 440px;
+}
+
+.project-section-image:only-child,
+.project-section-image:first-child:nth-last-child(odd) {
+  grid-column: 1 / -1;
+
+  height: min(75vh, 900px);
+}
+
+.project-section-image-content {
+  object-fit: cover;
+}
+
+.project-section-empty {
+  height: clamp(180px, 20vw, 280px);
+
+  min-height: 0;
+}
+
+.project-back {
+  padding: 150px 5vw;
+}
+
+.project-back a {
+  font-size: 13px;
+
+  border-bottom: 1px solid #111;
+
+  padding-bottom: 5px;
+}
+
+.project-footer {
+  padding: 0 5vw 40px;
+}
+
+/* =====================================================
+   WORK ARCHIVE
+   ===================================================== */
+
+.work-page-header {
+  min-height: 80vh;
+
+  padding: 150px 5vw 100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+.work-page-header h1 {
+  margin: 30px 0 60px;
+
+  font-size: clamp(90px, 18vw, 260px);
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+.work-introduction {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+.work-filter-section {
+  padding: 30px 5vw 80px;
+
+  border-top: 1px solid #111;
+}
+
+.work-filter-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+}
+
+.work-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 10px 18px;
+
+  background: transparent;
+
+  border: 1px solid #111;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background: #111;
+
+  color: #f4f3ef;
+}
+
+.work-projects {
+  padding: 0 5vw 150px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 130px;
+}
+
+.project-card {
+  display: block;
+}
+
+.project-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: auto;
+
+  min-height: 0;
+
+  aspect-ratio: 3 / 2;
+
+  overflow: hidden;
+}
+
+.project-image-placeholder {
+  width: 100%;
+
+  height: 100%;
+
+  background: #d8d6cf;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: transform 0.7s ease;
+}
+
+.project-image-placeholder span {
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  opacity: 0.5;
+}
+
+.project-card:hover .project-image-placeholder {
+  transform: scale(0.985);
+}
+
+.project-card-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  margin-top: 15px;
+
+  border-top: 1px solid #111;
+}
+
+.project-card-title {
+  display: flex;
+
+  gap: 25px;
+
+  align-items: flex-start;
+}
+
+.project-card-title .project-number {
+  margin-top: 8px;
+}
+
+.project-card-title h2 {
+  margin: 0;
+
+  font-size: clamp(30px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.project-card-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: right;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.5;
+}
+
+.project-card-category {
+  max-width: 240px;
+}
+
+.project-card-year {
+  opacity: 0.6;
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: 65px;
+
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+
+    font-size: 9px;
+  }
+
+  .hero {
+    padding: 100px 20px 40px;
+
+    min-height: 100svh;
+  }
+
+  .hero h1 {
+    font-size: 27vw;
+  }
+
+  .work-section {
+    padding: 100px 20px;
+  }
+
+  .featured-work {
+    padding-top: 80px;
+  }
+
+  .projects {
+    gap: 80px;
+  }
+
+  .project-image {
+    min-height: 350px;
+
+    height: 55vh;
+  }
+
+  .project-info {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .project-meta {
+    text-align: left;
+  }
+
+  .project-hero {
+    min-height: 80vh;
+
+    padding: 120px 20px 50px;
+  }
+
+  .project-hero h1 {
+    font-size: 17vw;
+
+    margin-bottom: 60px;
+  }
+
+  .project-page-meta {
+    gap: 30px;
+
+    flex-wrap: wrap;
+  }
+
+  .project-large-image {
+    width: 100%;
+
+    height: 60vh;
+  }
+
+  .project-introduction {
+    display: block;
+
+    padding: 100px 20px;
+  }
+
+  .project-introduction > div {
+    margin-top: 60px;
+  }
+
+  .project-section {
+    padding: 80px 20px;
+  }
+
+  .project-placeholder {
+    min-height: 350px;
+
+    height: 50vh;
+  }
+
+  .project-section-image {
+    min-height: 350px;
+
+    height: 50vh;
+  }
+
+  .project-section-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .project-section-image:only-child,
+  .project-section-image:first-child:nth-last-child(odd) {
+    height: 50vh;
+  }
+
+  .project-section-empty {
+    height: 180px;
+  }
+
+  .project-back {
+    padding: 100px 20px;
+  }
+
+  .work-page-header {
+    min-height: 70vh;
+
+    padding: 120px 20px 70px;
+  }
+
+  .work-page-header h1 {
+    font-size: 27vw;
+  }
+
+  .work-filter-section {
+    padding: 25px 20px 60px;
+  }
+
+  .work-projects {
+    padding: 0 20px 100px;
+
+    gap: 90px;
+  }
+
+  .project-card-info {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .project-card-image {
+    min-height: 0;
+
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-card-meta {
+    text-align: left;
+  }
+
+  .project-card-title {
+    gap: 15px;
+  }
+
+  .about-section {
+    padding: 100px 20px;
+  }
+
+  .about-preview {
+    padding-top: 90px;
+
+    padding-bottom: 90px;
+  }
+
+  .about-preview .about-content {
+    margin-top: 60px;
+  }
+
+  .contact-section {
+    padding: 100px 20px 30px;
+  }
+
+  .contact-preview {
+    min-height: 70vh;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    gap: 30px;
+
+    padding-top: 80px;
+  }
+}
+/* ========================================
+   WORK ARCHIVE
+   ======================================== */
+
+.work-header-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.work-header-layout h1 {
+  margin: 0;
+}
+
+.work-introduction {
+  max-width: 32rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.work-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 5rem;
+  padding: 0 2.5rem 8rem;
+}
+
+.work-project-item {
+  min-width: 0;
+}
+
+.work-project-item-1 {
+  grid-column: 1 / -1;
+}
+
+.work-project-item-1 .project-card-image {
+  aspect-ratio: 2 / 1;
+}
+
+.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e5e3de;
+}
+
+.project-card-image-content {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card-image-content {
+  transform: scale(1.015);
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dedcd6;
+  color: #777;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+
+.project-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 0.8rem;
+}
+
+.project-card-title {
+  display: flex;
+  gap: 0.8rem;
+  align-items: baseline;
+}
+
+.project-card-title h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.project-number {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.project-card-meta {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card-category,
+.project-card-year {
+  white-space: nowrap;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .work-header-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .work-projects {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 5rem;
+    row-gap: 3.5rem;
+  }
+
+  .work-project-item-1 {
+    grid-column: auto;
+  }
+
+  .work-project-item-1 .project-card-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-card-info {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .project-card-meta {
+    padding-left: 1.8rem;
+  }
+}
