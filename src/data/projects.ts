@@ -46,31 +46,25 @@ const createEmptyCaseStudySections = (): ProjectSection[] => [
     id: "systems",
     title: "Systems",
     description: "",
-    images: ["/images/adaptive-reuse/systems.jpg"],
+    images: [],
   },
   {
     id: "architecture",
     title: "Architecture",
     description: "",
-    images: [
-      "/images/adaptive-reuse/architecture.jpg"
-    ],
+    images: [],
   },
   {
     id: "development",
     title: "Development",
     description: "",
-    images: [
-      "/images/adaptive-reuse/concept.jpg"
-    ],
+    images: [],
   },
   {
     id: "renders",
     title: "Renders",
     description: "",
-    images: [
-      "/images/adaptive-reuse/renders.jpg"
-    ],
+    images: [],
   },
 ];
 
@@ -100,56 +94,102 @@ export const projects: Project[] = [
       "An adaptive reuse proposal exploring the transformation of an abandoned Bauhaus building into a renewed architectural and social environment.",
 
     heroImage: "/images/adaptive-reuse/hero.jpg",
-    hasHeroImage: false,
+    hasHeroImage: true,
 
     category: "Architecture / Adaptive Reuse",
-    sections: createEmptyCaseStudySections(),
-  },
 
-  {
-    slug: "high-rise",
-    number: "02",
+    sections: [
+      {
+        id: "existing-conditions",
+        title: "Existing Conditions",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/existing-01.jpg",
+          "/images/adaptive-reuse/existing-02.jpg",
+          "/images/adaptive-reuse/existing-03.jpg",
+          "/images/adaptive-reuse/existing-04.jpg",
+          "/images/adaptive-reuse/existing-05.jpg",
+        ],
+      },
 
-    title: "High-Rise",
+      {
+        id: "conceptual-diagrams",
+        title: "Conceptual Diagrams",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/concept-01.jpg",
+          "/images/adaptive-reuse/concept-02.jpg",
+          "/images/adaptive-reuse/concept-03.jpg",
+          "/images/adaptive-reuse/concept-04.jpg",
+          "/images/adaptive-reuse/concept-05.jpg",
+        ],
+      },
 
-    type: "academic",
+      {
+        id: "details",
+        title: "Details",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/detail-01.jpg",
+          "/images/adaptive-reuse/detail-02.jpg",
+          "/images/adaptive-reuse/detail-03.jpg",
+          "/images/adaptive-reuse/detail-04.jpg",
+          "/images/adaptive-reuse/detail-05.jpg",
+        ],
+      },
 
-    description: "",
+      {
+        id: "plans",
+        title: "Plans",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/plan-01.jpg",
+          "/images/adaptive-reuse/plan-02.jpg",
+          "/images/adaptive-reuse/plan-03.jpg",
+          "/images/adaptive-reuse/plan-04.jpg",
+          "/images/adaptive-reuse/plan-05.jpg",
+        ],
+      },
 
-    hasHeroImage: false,
+      {
+        id: "sections",
+        title: "Sections",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/section-01.jpg",
+          "/images/adaptive-reuse/section-02.jpg",
+          "/images/adaptive-reuse/section-03.jpg",
+          "/images/adaptive-reuse/section-04.jpg",
+          "/images/adaptive-reuse/section-05.jpg",
+        ],
+      },
 
-    sections: createEmptyCaseStudySections(),
-  },
+      {
+        id: "elevations",
+        title: "Elevations",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/elevation-01.jpg",
+          "/images/adaptive-reuse/elevation-02.jpg",
+          "/images/adaptive-reuse/elevation-03.jpg",
+          "/images/adaptive-reuse/elevation-04.jpg",
+          "/images/adaptive-reuse/elevation-05.jpg",
+        ],
+      },
 
-  {
-    slug: "school",
-    number: "03",
-
-    title: "School of Built Environment",
-
-    type: "academic",
-
-    year: "2026",
-    location: "Addis Ababa, Ethiopia",
-    status: "Academic",
-
-    role: "Architectural Designer",
-
-    contribution: [
-      "Architectural design",
-      "Site planning",
-      "Spatial organization",
-      "Visualization",
+      {
+        id: "renders",
+        title: "Renders",
+        description: "",
+        images: [
+          "/images/adaptive-reuse/render-01.jpg",
+          "/images/adaptive-reuse/render-02.jpg",
+          "/images/adaptive-reuse/render-03.jpg",
+          "/images/adaptive-reuse/render-04.jpg",
+          "/images/adaptive-reuse/render-05.jpg",
+        ],
+      },
     ],
-
-    description:
-      "An educational environment organized around learning, recreation, movement and community.",
-
-    heroImage: "/images/school/hero.jpg",
-    hasHeroImage: false,
-
-    category: "Architecture / Education",
-    sections: createEmptyCaseStudySections(),
   },
 
   {
