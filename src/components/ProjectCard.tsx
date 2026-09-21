@@ -1,3 +1,4 @@
+import { ViewTransition } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Project } from "@/data/projects";
@@ -12,21 +13,27 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       href={`/projects/${project.slug}`}
       className="project-card"
     >
-      <div className="project-card-image">
-        {project.hasHeroImage && project.heroImage ? (
-          <Image
-            src={project.heroImage}
-            alt={project.title}
-            fill
-            sizes="(max-width: 700px) 100vw, 50vw"
-            className="project-card-image-content"
-          />
-        ) : (
-          <div className="project-image-placeholder">
-            <span>IMAGE COMING SOON</span>
-          </div>
-        )}
-      </div>
+      <ViewTransition
+        name={`project-${project.slug}`}
+        share="morph"
+        default="none"
+      >
+        <div className="project-card-image">
+          {project.heroImage ? (
+            <Image
+              src={project.heroImage}
+              alt={project.title}
+              fill
+              sizes="(max-width: 700px) 100vw, 50vw"
+              className="project-card-image-content"
+            />
+          ) : (
+            <div className="project-image-placeholder">
+              <span>IMAGE COMING SOON</span>
+            </div>
+          )}
+        </div>
+      </ViewTransition>
 
       <div className="project-card-info">
         <div className="project-card-title">

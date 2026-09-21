@@ -1,22 +1,23 @@
 import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
+import PageTransition from "@/components/PageTransition";
+import { site } from "@/data/site";
 
 export default function ContactPage() {
   return (
-    <main>
-      <Navigation />
+    <PageTransition>
+      <main>
+        <section className="contact-section">
+          <p className="eyebrow">CONTACT</p>
 
-      <section className="contact-section">
-        <p className="eyebrow">CONTACT</p>
+          <h2>Let&apos;s talk.</h2>
 
-        <h2>Let&apos;s talk.</h2>
+          <a href={`mailto:${site.email}`} className="email">
+            {site.email}
+          </a>
 
-        <a href="mailto:your@email.com" className="email">
-          your@email.com
-        </a>
-
-        <Footer />
-      </section>
-    </main>
+          <Footer />
+        </section>
+      </main>
+    </PageTransition>
   );
 }

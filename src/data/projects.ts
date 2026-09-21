@@ -16,6 +16,8 @@ export type ProjectSection = {
   title: string;
   description?: string;
   images: string[];
+  // "contain" shows drawings uncropped; "cover" fills the frame (renders, photos).
+  fit?: "cover" | "contain";
 };
 
 export type Project = {
@@ -35,7 +37,6 @@ export type Project = {
   description: string;
 
   heroImage?: string;
-  hasHeroImage: boolean;
 
   category?: string;
   sections: ProjectSection[];
@@ -65,6 +66,7 @@ const createEmptyCaseStudySections = (): ProjectSection[] => [
     title: "Renders",
     description: "",
     images: [],
+    fit: "cover",
   },
 ];
 
@@ -94,7 +96,6 @@ export const projects: Project[] = [
       "An adaptive reuse proposal exploring the transformation of an abandoned Bauhaus building into a renewed architectural and social environment.",
 
     heroImage: "/images/adaptive-reuse/hero.jpg",
-    hasHeroImage: true,
 
     category: "Architecture / Adaptive Reuse",
 
@@ -104,12 +105,12 @@ export const projects: Project[] = [
         title: "Existing Conditions",
         description: "",
         images: [
-          "/images/adaptive-reuse/existing-01.jpg",
-          "/images/adaptive-reuse/existing-02.jpg",
-          "/images/adaptive-reuse/existing-03.jpg",
-          "/images/adaptive-reuse/existing-04.jpg",
-          "/images/adaptive-reuse/existing-05.jpg",
-        ],
+          "/images/adaptive-reuse/existing3.jpg",
+          "/images/adaptive-reuse/existing.jpg",
+          "/images/adaptive-reuse/existing1.jpg",
+          "/images/adaptive-reuse/existing2.jpg",
+        ]
+
       },
 
       {
@@ -117,11 +118,11 @@ export const projects: Project[] = [
         title: "Conceptual Diagrams",
         description: "",
         images: [
-          "/images/adaptive-reuse/concept-01.jpg",
-          "/images/adaptive-reuse/concept-02.jpg",
-          "/images/adaptive-reuse/concept-03.jpg",
-          "/images/adaptive-reuse/concept-04.jpg",
-          "/images/adaptive-reuse/concept-05.jpg",
+          "/images/adaptive-reuse/concept.jpg",
+          "/images/adaptive-reuse/concept1.jpg",
+          "/images/adaptive-reuse/concept2.jpg",
+          "/images/adaptive-reuse/concept3.jpg",
+          "/images/adaptive-reuse/concept4.jpg",
         ],
       },
 
@@ -130,11 +131,13 @@ export const projects: Project[] = [
         title: "Details",
         description: "",
         images: [
-          "/images/adaptive-reuse/detail-01.jpg",
-          "/images/adaptive-reuse/detail-02.jpg",
-          "/images/adaptive-reuse/detail-03.jpg",
-          "/images/adaptive-reuse/detail-04.jpg",
-          "/images/adaptive-reuse/detail-05.jpg",
+          "/images/adaptive-reuse/details.jpg",
+          "/images/adaptive-reuse/details1.jpg",
+          "/images/adaptive-reuse/details2.jpg",
+          "/images/adaptive-reuse/details3.jpg",
+          "/images/adaptive-reuse/details4.jpg",
+          "/images/adaptive-reuse/details5.jpg",
+          "/images/adaptive-reuse/details6.jpg",
         ],
       },
 
@@ -142,59 +145,36 @@ export const projects: Project[] = [
         id: "plans",
         title: "Plans",
         description: "",
-        images: [
-          "/images/adaptive-reuse/plan-01.jpg",
-          "/images/adaptive-reuse/plan-02.jpg",
-          "/images/adaptive-reuse/plan-03.jpg",
-          "/images/adaptive-reuse/plan-04.jpg",
-          "/images/adaptive-reuse/plan-05.jpg",
-        ],
+        images: ["/images/adaptive-reuse/plan01.jpg"],
       },
 
       {
         id: "sections",
         title: "Sections",
         description: "",
-        images: [
-          "/images/adaptive-reuse/section-01.jpg",
-          "/images/adaptive-reuse/section-02.jpg",
-          "/images/adaptive-reuse/section-03.jpg",
-          "/images/adaptive-reuse/section-04.jpg",
-          "/images/adaptive-reuse/section-05.jpg",
-        ],
+        images: ["/images/adaptive-reuse/section01.jpg"],
       },
 
       {
         id: "elevations",
         title: "Elevations",
         description: "",
-        images: [
-          "/images/adaptive-reuse/elevation-01.jpg",
-          "/images/adaptive-reuse/elevation-02.jpg",
-          "/images/adaptive-reuse/elevation-03.jpg",
-          "/images/adaptive-reuse/elevation-04.jpg",
-          "/images/adaptive-reuse/elevation-05.jpg",
-        ],
+        images: [],
       },
 
       {
         id: "renders",
         title: "Renders",
         description: "",
-        images: [
-          "/images/adaptive-reuse/render-01.jpg",
-          "/images/adaptive-reuse/render-02.jpg",
-          "/images/adaptive-reuse/render-03.jpg",
-          "/images/adaptive-reuse/render-04.jpg",
-          "/images/adaptive-reuse/render-05.jpg",
-        ],
+        images: ["/images/adaptive-reuse/render01.jpg"],
+        fit: "cover",
       },
     ],
   },
 
   {
     slug: "mixed-use-development",
-    number: "04",
+    number: "02",
 
     title: "Mixed-Use Development",
 
@@ -216,16 +196,13 @@ export const projects: Project[] = [
     description:
       "A mixed-use development combining commercial, residential and public functions within an active urban environment.",
 
-    heroImage: "/images/mixed-use/hero.jpg",
-    hasHeroImage: false,
-
     category: "Architecture / Urbanism",
     sections: createEmptyCaseStudySections(),
   },
 
   {
     slug: "bakery-commercial",
-    number: "05",
+    number: "03",
 
     title: "Bakery & Commercial Space",
 
@@ -247,11 +224,7 @@ export const projects: Project[] = [
     description:
       "A bakery and commercial environment exploring spatial fluidity, material honesty and the relationship between production and gathering.",
 
-    heroImage: "/images/bakery/hero.jpg",
-    hasHeroImage: false,
-
     category: "Architecture / Interior",
     sections: createEmptyCaseStudySections(),
   },
-
 ];
